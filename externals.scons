@@ -35,4 +35,8 @@ usedExternals.append({ 'name' : 'wcslib', 'iversion' : '4.25.1-i1' })
 usedExternals.append({ 'name' : 'healpix', 'iversion' : '3.30' })
 usedExternals.append({ 'name' : 'gsl', 'iversion' : '1.16' })
 
+if baseEnv.GetOption('CONDA-EXT'):
+    for external in usedExternals:
+        external['iversion'] = 'conda'
+
 Return('usedExternals')
