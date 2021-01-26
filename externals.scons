@@ -10,9 +10,10 @@ usedExternals.append({ 'name' : 'fftw', 'iversion' : '3.1.2-i1' })
 usedExternals.append({ 'name' : 'cfitsio', 'iversion' : 'v3370' })
 usedExternals.append({ 'name' : 'ape', 'iversion' : '2.8' })
 
+
 if baseEnv['OSNAME'] == 'snowleopard' and noroot != True:
      usedExternals.append({ 'name' : 'ROOT', 'iversion' : 'v5.34.03-i1' })
-else:
+elif noroot != True:
      usedExternals.append({ 'name' : 'ROOT', 'iversion' : 'v5.34.34' })
 
 usedExternals.append({ 'name' : 'xerces', 'iversion' : '3.1.3' })
